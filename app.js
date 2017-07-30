@@ -16,7 +16,12 @@ var commentRoutes    = require("./routes/comments"),
     restaurantRoutes = require("./routes/restaurants"),
     indexRoutes      = require("./routes/index")
     
-mongoose.connect("mongodb://localhost/fakeyelp");
+//mongoose.connect("mongodb://localhost/fakeyelp");
+
+
+mongoose.connect("mongodb://loveboy26:loveboy26@ds127783.mlab.com:27783/yelpres");
+
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
